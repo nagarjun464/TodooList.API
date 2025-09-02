@@ -1,0 +1,15 @@
+# .gitignore
+
+# Ignore VS local files
+.vs/
+*.user
+*.suo
+*.cache
+*.db
+
+# Ignore node_modules
+node_modules/
+
+# Ignore build
+dist/
+build/

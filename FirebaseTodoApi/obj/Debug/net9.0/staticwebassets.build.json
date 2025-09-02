@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "SrKMkYOKXT9vdD75eswUN4u+IhjHe7rPurAbWSilE7M=",
+  "Source": "FirebaseTodoApi",
+  "BasePath": "_content/FirebaseTodoApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
