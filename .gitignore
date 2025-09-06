@@ -13,3 +13,7 @@ node_modules/
 # Ignore build
 dist/
 build/
+
+*.json
+*.key.json
+
