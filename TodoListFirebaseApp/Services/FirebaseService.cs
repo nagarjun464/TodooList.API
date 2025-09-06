@@ -17,9 +17,14 @@ namespace TodoListFirebaseApp.Services
             try
             {
                 var projectId = configuration["Firebase:ProjectId"] ?? "todolistfirebaseapp-d4e9a";
-                
+
                 // Method 1: Try credentials file first
-                var credentialsPath = ".\\todolistfirebaseapp-d4e9a-firebase-adminsdk-fbsvc-91c5c30adc.json";
+                FirebaseApp.Create(new AppOptions()
+                {
+                    Credential = GoogleCredential.GetApplicationDefault()
+                });
+
+                var credentialsPath = Credential;
                 if (!string.IsNullOrEmpty(credentialsPath) && File.Exists(credentialsPath))
                 {
                     Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
