@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodoListFirebaseApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af38c3a09e5b29a751fe1cce2f8f702fbd936f2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9bb8305fbcab01e8d35ee8d87650d96b374cfd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodoListFirebaseApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodoListFirebaseApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

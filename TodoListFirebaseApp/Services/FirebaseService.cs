@@ -8,12 +8,6 @@ namespace TodoListFirebaseApp.Services
     public class FirebaseService
     {
         private readonly FirestoreDb? _firestore;
-        private readonly List<TodoItem> _mockTodos = new List<TodoItem>
-        {
-            new TodoItem { Id = "1", Title = "Mock Todo 1", IsCompleted = false, CreatedAt = DateTime.UtcNow },
-            new TodoItem { Id = "2", Title = "Mock Todo 2", IsCompleted = true, CreatedAt = DateTime.UtcNow.AddDays(-1) },
-            new TodoItem { Id = "3", Title = "Mock Todo 3", IsCompleted = false, CreatedAt = DateTime.UtcNow.AddHours(-2) }
-        };
         private readonly bool _isDevelopmentMode;
 
         public FirebaseService(IConfiguration configuration)
@@ -76,25 +70,7 @@ namespace TodoListFirebaseApp.Services
                     Console.WriteLine($"⚠️ Default credentials failed: {ex.Message}");
                 }
 
-                // Method 5: Development mode fallback
-                if (_isDevelopmentMode)
-                {
-                    Console.WriteLine("🔄 Development mode: Running with mock Firebase service");
-                    Console.WriteLine("💡 To use real Firebase, set one of these:");
-                    Console.WriteLine("   - FIREBASE_SERVICE_ACCOUNT_KEY environment variable");
-                    Console.WriteLine("   - GOOGLE_APPLICATION_CREDENTIALS environment variable");
-                    Console.WriteLine("   - Run 'gcloud auth application-default login' locally");
-                    _firestore = null;
-                }
-                else
-                {
-                    throw new InvalidOperationException(
-                        "Firebase credentials not found. Please set one of:\n" +
-                        "- FIREBASE_SERVICE_ACCOUNT_KEY environment variable\n" +
-                        "- GOOGLE_APPLICATION_CREDENTIALS environment variable\n" +
-                        "- Run 'gcloud auth application-default login' locally"
-                    );
-                }
+                
             }
             catch (Exception ex)
             {
@@ -113,20 +89,6 @@ namespace TodoListFirebaseApp.Services
 
         public async Task<List<TodoItem>> GetTodosAsync()
         {
-            if (_firestore == null)
-            {
-                if (_isDevelopmentMode)
-                {
-                    Console.WriteLine("🔄 Development mode: Returning mock todos");
-                    return _mockTodos.ToList();
-                }
-                else
-                {
-                    Console.WriteLine("Warning: Firebase not initialized, returning empty list");
-                    return new List<TodoItem>();
-                }
-            }
-
             try
             {
                 var todos = new List<TodoItem>();
@@ -143,11 +105,6 @@ namespace TodoListFirebaseApp.Services
             catch (Exception ex)
             {
                 Console.WriteLine($"Error getting todos: {ex.Message}");
-                if (_isDevelopmentMode)
-                {
-                    Console.WriteLine("🔄 Falling back to mock data due to Firebase error");
-                    return _mockTodos.ToList();
-                }
                 return new List<TodoItem>();
             }
         }
@@ -159,7 +116,7 @@ namespace TodoListFirebaseApp.Services
                 if (_isDevelopmentMode)
                 {
                     Console.WriteLine("🔄 Development mode: Returning mock todo by id");
-                    return _mockTodos.FirstOrDefault(t => t.Id == id);
+                    
                 }
                 else
                 {
@@ -190,7 +147,7 @@ namespace TodoListFirebaseApp.Services
                     Console.WriteLine("🔄 Development mode: Adding to mock storage");
                     todo.Id = todo.Id ?? Guid.NewGuid().ToString();
                     todo.CreatedAt = DateTime.UtcNow;
-                    _mockTodos.Add(todo);
+                    
                     return;
                 }
                 else
@@ -214,25 +171,7 @@ namespace TodoListFirebaseApp.Services
 
         public async Task<bool> DeleteTodoAsync(string id)
         {
-            if (_firestore == null)
-            {
-                if (_isDevelopmentMode)
-                {
-                    Console.WriteLine("🔄 Development mode: Deleting from mock storage");
-                    var todo = _mockTodos.FirstOrDefault(t => t.Id == id);
-                    if (todo != null)
-                    {
-                        _mockTodos.Remove(todo);
-                        return true;
-                    }
-                    return false;
-                }
-                else
-                {
-                    Console.WriteLine("Warning: Firebase not initialized, returning false");
-                    return false;
-                }
-            }
+            
 
             try
             {
@@ -257,14 +196,7 @@ namespace TodoListFirebaseApp.Services
                 if (_isDevelopmentMode)
                 {
                     Console.WriteLine("🔄 Development mode: Updating in mock storage");
-                    var existingTodo = _mockTodos.FirstOrDefault(t => t.Id == todo.Id);
-                    if (existingTodo != null)
-                    {
-                        existingTodo.Title = todo.Title;
-                        existingTodo.IsCompleted = todo.IsCompleted;
-                        existingTodo.CreatedAt = todo.CreatedAt;
-                        return true;
-                    }
+                    
                     return false;
                 }
                 else
