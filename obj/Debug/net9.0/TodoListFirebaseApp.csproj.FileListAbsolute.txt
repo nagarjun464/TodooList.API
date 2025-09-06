@@ -3,3 +3,4 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebas
 C:\Users\smart\source\repos\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.AssemblyInfo.cs
 C:\Users\smart\source\repos\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.csproj.CoreCompileInputs.cache
 C:\Users\smart\source\repos\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.csproj.AssemblyReference.cache
+C:\Users\smart\source\repos\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.sourcelink.json

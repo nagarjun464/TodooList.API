@@ -1,0 +1,21 @@
+# Build artifacts
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# IDE files
+.vs/
+.vscode/
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keep Firebase credentials
+!todolistfirebaseapp-d4e9a-firebase-adminsdk-fbsvc-91c5c30adc.json

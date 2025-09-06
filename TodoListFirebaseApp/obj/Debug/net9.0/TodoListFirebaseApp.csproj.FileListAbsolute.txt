@@ -60,10 +60,14 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.TodoListFirebaseApp.props
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.TodoListFirebaseApp.props
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoList.C9453E53.Up2Date
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\refint\TodoListFirebaseApp.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.pdb
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.genruntimeconfig.cache
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\ref\TodoListFirebaseApp.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.sourcelink.json
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\todolistfirebaseapp-d4e9a-firebase-adminsdk-fbsvc-91c5c30adc.json
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
