@@ -69,5 +69,7 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.sourcelink.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\todolistfirebaseapp-d4e9a-firebase-adminsdk-fbsvc-91c5c30adc.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\FirebaseAdmin.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.Gax.Rest.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\firebase-key.json

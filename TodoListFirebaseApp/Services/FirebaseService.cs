@@ -2,6 +2,8 @@
 using TodoListFirebaseApp.Models;
 using Microsoft.Extensions.Configuration;
 using Google.Apis.Auth.OAuth2;
+using FirebaseAdmin;
+using System.Net;
 
 namespace TodoListFirebaseApp.Services
 {
@@ -10,28 +12,40 @@ namespace TodoListFirebaseApp.Services
         private readonly FirestoreDb? _firestore;
         private readonly bool _isDevelopmentMode;
 
+        public string? Credential { get; private set; }
+
         public FirebaseService(IConfiguration configuration)
         {
             _isDevelopmentMode = configuration["ASPNETCORE_ENVIRONMENT"] == "Development";
             
             try
             {
+                
+
+                _firestore = FirestoreDb.Create(configuration["Firebase:ProjectId"]);
                 var projectId = configuration["Firebase:ProjectId"] ?? "todolistfirebaseapp-d4e9a";
 
-                // Method 1: Try credentials file first
-                FirebaseApp.Create(new AppOptions()
+                try
                 {
-                    Credential = GoogleCredential.GetApplicationDefault()
-                });
+                    var credential = GoogleCredential.GetApplicationDefault();
 
-                var credentialsPath = Credential;
-                if (!string.IsNullOrEmpty(credentialsPath) && File.Exists(credentialsPath))
-                {
-                    Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialsPath);
+                    if (FirebaseApp.DefaultInstance == null)
+                    {
+                        FirebaseApp.Create(new AppOptions()
+                        {
+                            Credential = credential,
+                            ProjectId = projectId
+                        });
+                    }
                     _firestore = FirestoreDb.Create(projectId);
-                    Console.WriteLine("✅ Firebase initialized with credentials file");
-                    return;
+                    Console.WriteLine("✅ Firebase initialized with Application Default Credentials");
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"❌ Error initializing Firebase: {ex.Message}");
+                    throw;
+                }
+
 
                 // Method 2: Try environment variable for credentials file path
                 var envCredentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");

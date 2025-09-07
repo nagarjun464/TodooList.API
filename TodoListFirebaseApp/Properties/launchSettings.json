@@ -2,9 +2,11 @@
   "profiles": {
     "http": {
       "commandName": "Project",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "GOOGLE_APPLICATION_CREDENTIALS": ".\\firebase-key.json"
+
+        },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5144"
     },
