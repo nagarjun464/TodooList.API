@@ -44,9 +44,13 @@ jobs:
     # -------------------------
     # 4. Build & Push image
     # -------------------------
-    - name: Build and push Docker image
+    - name: Build and Push Docker image
+      working-directory: TodoListFirebaseApp   # 👈 where Dockerfile is
       run: |
-        gcloud builds submit --tag us-central1-docker.pkg.dev/todoolist-2025/todo-repo/todo-api .
+        IMAGE="us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}:${{ github.sha }}"
+        echo "IMAGE=$IMAGE" >> $GITHUB_ENV
+        docker build -t $IMAGE .
+        docker push $IMAGE
 
 
     # -------------------------
