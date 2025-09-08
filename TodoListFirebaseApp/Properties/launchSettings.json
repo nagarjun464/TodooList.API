@@ -4,7 +4,7 @@
       "commandName": "Project",
         "environmentVariables": {
             "ASPNETCORE_ENVIRONMENT": "Development",
-            "GOOGLE_APPLICATION_CREDENTIALS": ".\\firebase-key.json"
+            //"GOOGLE_APPLICATION_CREDENTIALS": ".\\firebase-key.json"
 
         },
       "dotnetRunMessages": true,

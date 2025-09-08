@@ -1,5 +1,6 @@
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\appsettings.json
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\firebase-key.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\TodoListFirebaseApp.staticwebassets.runtime.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\TodoListFirebaseApp.staticwebassets.endpoints.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\TodoListFirebaseApp.exe
@@ -8,9 +9,11 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\TodoListFirebaseApp.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\TodoListFirebaseApp.pdb
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Blazor.UI.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\FirebaseAdmin.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.CommonProtos.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.Gax.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.Gax.Grpc.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.Gax.Rest.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Apis.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Apis.Auth.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Apis.Core.dll
@@ -27,6 +30,8 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\System.Linq.Async.dll
@@ -39,6 +44,7 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.csproj.CoreCompileInputs.cache
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.sourcelink.json
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\scopedcss\bundle\TodoListFirebaseApp.styles.css
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\compressed\lmpgtpoj07-i7fm3qav1v.gz
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\compressed\2tox3ru3nq-3h70uk49pc.gz
@@ -60,16 +66,10 @@ C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\ne
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.TodoListFirebaseApp.props
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.TodoListFirebaseApp.props
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoList.C9453E53.Up2Date
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\refint\TodoListFirebaseApp.dll
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.pdb
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.genruntimeconfig.cache
 C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\ref\TodoListFirebaseApp.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\TodoListFirebaseApp.sourcelink.json
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\FirebaseAdmin.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\Google.Api.Gax.Rest.dll
-C:\Users\smart\source\repos\TodoListFirebaseApp\TodoListFirebaseApp\bin\Debug\net9.0\firebase-key.json

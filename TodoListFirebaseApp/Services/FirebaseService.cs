@@ -27,16 +27,55 @@ namespace TodoListFirebaseApp.Services
 
                 try
                 {
-                    var credential = GoogleCredential.GetApplicationDefault();
+                    //var credential = GoogleCredential.GetApplicationDefault();
+
+                    //string json = "{"
+                    //+ "\"type\": \"service_account\","
+                    //+ "\"project_id\": \"todolistfirebaseapp-d4e9a\","
+                    //+ "\"private_key_id\": \"a2e2880012da9b1d33860a32df49ffce050ec0f7\","
+                    //+ "\"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhki...\\n-----END PRIVATE KEY-----\\n\","
+                    //+ "\"client_email\": \"firebase-adminsdk-fbsvc@todolistfirebaseapp-d4e9a.iam.gserviceaccount.com\","
+                    //+ "\"client_id\": \"109053483948312996260\","
+                    //+ "\"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\","
+                    //+ "\"token_uri\": \"https://oauth2.googleapis.com/token\","
+                    //+ "\"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\","
+                    //+ "\"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40todolistfirebaseapp-d4e9a.iam.gserviceaccount.com\","
+                    //+ "\"universe_domain\": \"googleapis.com\""
+                    //+ "}";
+                    //var json = File.ReadAllText("firebase-key.json");
+                    //var credential = GoogleCredential.FromJson(json);
+
+                    //if (FirebaseApp.DefaultInstance == null)
+                    //{
+                    //    FirebaseApp.Create(new AppOptions
+                    //    {
+                    //        Credential = credential
+                    //    });
+                    //}
+
+                    // 🔹 Get secret JSON from environment
+                    //var keyJson = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
+
+                    var base64 = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
+                    var json = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(base64));
+                    var credential = GoogleCredential.FromJson(json);
+                    Console.WriteLine("#####FIREBASE_SERVICE_ACCOUNT_KEY#####" + json);
+
+                    if (string.IsNullOrEmpty(json))
+                        throw new InvalidOperationException("FIREBASE_SERVICE_ACCOUNT_KEY not found in environment");
+
+                    // 🔹 Create credential directly from JSON
+                    //var credential = GoogleCredential.FromJson(keyJson);
 
                     if (FirebaseApp.DefaultInstance == null)
                     {
-                        FirebaseApp.Create(new AppOptions()
+                        FirebaseApp.Create(new AppOptions
                         {
                             Credential = credential,
                             ProjectId = projectId
                         });
                     }
+
                     _firestore = FirestoreDb.Create(projectId);
                     Console.WriteLine("✅ Firebase initialized with Application Default Credentials");
                 }
@@ -46,48 +85,6 @@ namespace TodoListFirebaseApp.Services
                     throw;
                 }
 
-
-                // Method 2: Try environment variable for credentials file path
-                var envCredentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
-                if (!string.IsNullOrEmpty(envCredentialsPath) && File.Exists(envCredentialsPath))
-                {
-                    _firestore = FirestoreDb.Create(projectId);
-                    Console.WriteLine("✅ Firebase initialized with environment credentials file");
-                    return;
-                }
-
-                // Method 3: Try service account key as environment variable (for Docker/Cloud)
-                var serviceAccountKey = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
-                if (!string.IsNullOrEmpty(serviceAccountKey))
-                {
-                    try
-                    {
-                        var credential = GoogleCredential.FromJson(serviceAccountKey);
-                        _firestore = new FirestoreDbBuilder
-                        {
-                            ProjectId = projectId,
-                            Credential = credential
-                        }.Build();
-                        Console.WriteLine("✅ Firebase initialized with service account key from environment");
-                        return;
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"⚠️ Failed to parse service account key: {ex.Message}");
-                    }
-                }
-
-                // Method 4: Try default credentials (for local development with gcloud CLI)
-                try
-                {
-                    _firestore = FirestoreDb.Create(projectId);
-                    Console.WriteLine("✅ Firebase initialized with default credentials (gcloud CLI)");
-                    return;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"⚠️ Default credentials failed: {ex.Message}");
-                }
 
                 
             }
