@@ -1,4 +1,4 @@
-name: Deploy to Cloud Run
+Ename: Deploy to Cloud Run
 
 on:
   workflow_dispatch:   # Manual trigger
@@ -28,7 +28,7 @@ jobs:
     - name: Authenticate to Google Cloud
       uses: google-github-actions/auth@v2
       with:
-        credentials_json: ${{ secrets.GCP_SA_KEY }}   # <--- Add your GCP JSON key in GitHub secrets
+        credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY_BASE64 }}   # <--- Add your GCP JSON key in GitHub secrets
 
     - name: Set up gcloud
       uses: google-github-actions/setup-gcloud@v2
