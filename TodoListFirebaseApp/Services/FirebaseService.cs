@@ -61,6 +61,8 @@ namespace TodoListFirebaseApp.Services
 
                     var keyJson = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
                     Console.WriteLine("######FIREBASE_SERVICE_ACCOUNT_KEY########");
+                    Console.WriteLine(keyJson);
+                    Console.WriteLine("######FIREBASE_SERVICE_ACCOUNT_KEY########");
                     if (string.IsNullOrEmpty(keyJson))
                         throw new InvalidOperationException("Firebase service account not found in environment");
 
