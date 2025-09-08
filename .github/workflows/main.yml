@@ -3,7 +3,7 @@ name: Deploy to Cloud Run
 on:
   workflow_dispatch:   # Manual trigger
   push:
-    branches: ["main"] # Optional: deploy on push to main
+    branches: ["main" , "de"] # Optional: deploy on push to main
 
 env:
   PROJECT_ID: todoolist-2025
