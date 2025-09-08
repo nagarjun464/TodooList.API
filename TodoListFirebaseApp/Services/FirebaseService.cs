@@ -69,6 +69,7 @@ namespace TodoListFirebaseApp.Services
                     try
                     {
                         var credential = GoogleCredential.FromJson(keyJson);
+                        Console.WriteLine("######Credentail########"+ credential);
 
                         if (FirebaseApp.DefaultInstance == null)
                         {
@@ -78,7 +79,7 @@ namespace TodoListFirebaseApp.Services
                                 ProjectId = projectId
                             });
                         }
-
+                        Console.WriteLine("######Firebase_Instance_Saved########");
                         _firestore = FirestoreDb.Create(projectId);
                         Console.WriteLine("✅ Firebase initialized successfully");
                     }
