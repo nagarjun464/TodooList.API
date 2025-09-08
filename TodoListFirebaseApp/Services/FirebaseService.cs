@@ -56,7 +56,7 @@ namespace TodoListFirebaseApp.Services
                     // 🔹 Get secret JSON from environment
                     //var keyJson = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
 
-                    var base64 = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY");
+                    var base64 = Environment.GetEnvironmentVariable("FIREBASE_SERVICE_ACCOUNT_KEY_BASE64");
                     var json = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(base64));
                     var credential = GoogleCredential.FromJson(json);
                     Console.WriteLine("#####FIREBASE_SERVICE_ACCOUNT_KEY#####" + json);
