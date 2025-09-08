@@ -80,6 +80,13 @@ namespace TodoListFirebaseApp.Services
                             });
                         }
                         Console.WriteLine("######Firebase_Instance_Saved########");
+                        // Firestore – IMPORTANT: pass the credential explicitly (don’t use ADC)
+                        _firestore = new FirestoreDbBuilder
+                        {
+                            ProjectId = projectId,
+                            Credential = credential
+                        }.Build();
+
                         _firestore = FirestoreDb.Create(projectId);
                         Console.WriteLine("✅ Firebase initialized successfully");
                     }
