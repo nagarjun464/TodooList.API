@@ -44,21 +44,20 @@ jobs:
     # -------------------------
     # 4. Build & Push image
     # -------------------------
-    - name: Build and Push Docker image
-      working-directory: TodoListFirebaseApp
+    - name: Build and push Docker image
       run: |
-        IMAGE="us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}/${{ env.SERVICE_NAME }}:${{ github.sha }}"
-        echo "IMAGE=$IMAGE" >> $GITHUB_ENV
-        docker build -t $IMAGE .
-        docker push $IMAGE
+        gcloud builds submit --tag us-central1-docker.pkg.dev/todoolist-2025/todo-repo/todo-api .
+
 
     # -------------------------
     # 5. Deploy to Cloud Run
     # -------------------------
     - name: Deploy to Cloud Run
       run: |
-        gcloud run deploy ${{ env.SERVICE_NAME }} \
-          --image $IMAGE \
-          --region ${{ env.REGION }} \
+        gcloud run deploy todo-api \
+          --image us-central1-docker.pkg.dev/todoolist-2025/todo-repo/todo-api \
+          --region us-central1 \
+          --platform managed \
           --allow-unauthenticated \
-          --update-secrets=FIREBASE_SERVICE_ACCOUNT_KEY=firebase-key:latest
+          --set-env-vars=FIREBASE_SERVICE_ACCOUNT_KEY="${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}"
+
