@@ -23,8 +23,10 @@ namespace TodoListFirebaseApp.Services
             {
                 
 
-                _firestore = FirestoreDb.Create(configuration["Firebase:ProjectId"]);
+                //_firestore = FirestoreDb.Create(configuration["Firebase:ProjectId"]);
+                Console.WriteLine("######Initial########");
                 var projectId = configuration["Firebase:ProjectId"] ?? "todolistfirebaseapp-d4e9a";
+                Console.WriteLine("######projectId########");
 
                 try
                 {
