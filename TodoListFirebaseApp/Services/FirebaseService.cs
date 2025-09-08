@@ -87,7 +87,7 @@ namespace TodoListFirebaseApp.Services
                             Credential = credential
                         }.Build();
                         Console.WriteLine("######FirestoreDbBuilder########");
-                        _firestore = FirestoreDb.Create(projectId);
+                     
                         Console.WriteLine("✅ Firebase initialized successfully");
                     }
                     catch (Exception ex)
