@@ -14,6 +14,7 @@ namespace TodoListFirebaseApp.Services
 
         public string? Credential { get; private set; }
 
+
         public FirebaseService(IConfiguration configuration)
         {
             _isDevelopmentMode = configuration["ASPNETCORE_ENVIRONMENT"] == "Development";
