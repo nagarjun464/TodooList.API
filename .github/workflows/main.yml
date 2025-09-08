@@ -52,15 +52,14 @@ jobs:
         docker build -t $IMAGE .
         docker push $IMAGE
     
-    - name: Deploy to Cloud Run
+    - name: Deploy to Cloud Run # --set-env-vars=FIREBASE_SERVICE_ACCOUNT_KEY_BASE64="${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY_BASE64 }}"
       run: |
         gcloud run deploy ${{ env.SERVICE_NAME }} \
           --image "us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}/todo-api:${{ github.sha }}" \
           --region ${{ env.REGION }} \
           --platform managed \
           --allow-unauthenticated \
-          --set-env-vars=FIREBASE_SERVICE_ACCOUNT_KEY_BASE64="${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY_BASE64 }}"
-
+          --update-secrets=FIREBASE_SERVICE_ACCOUNT_KEY=secrets.GCP_SA_KEY:latest
 
 
 
